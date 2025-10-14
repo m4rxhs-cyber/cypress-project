@@ -31,8 +31,8 @@ const colors = {
 describe('Image Registration', () => {
   describe('Submitting an image with invalid inputs', () => {
     after( () => {
-      localStorage.clear()}
-    )
+      cy.clearAllLocalStorage()
+    })
     const input ={
       title: '', 
       url: ''
