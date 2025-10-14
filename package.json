@@ -1,0 +1,17 @@
+{
+  "name": "cypress-project",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "v20.14.0"
+  },
+  "scripts": {
+    "cypress:web": "npx cypress open",
+    "cypress:headless": "npx cypress run --browser electron"
+  },
+  "dependencies": {
+    "cypress": "^15.4.0"
+  }
+}
