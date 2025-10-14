@@ -8,6 +8,7 @@ on:
             - 'cypress-project/**.js'
             - 'cypress-project/**.json'
             - 'cypress-project/**.yml'
+            - '.github/workflows/**'
 
 jobs:
   cypress-project-tests:
