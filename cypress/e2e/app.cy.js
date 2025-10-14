@@ -24,14 +24,15 @@ class RegisterForm {
 }
 
 const registerForm = new RegisterForm()
-
-describe('Image Registration', () => {
 const colors = {
   errors: 'rgb(220, 53, 69)',
   sucess: ''
 }
-
+describe('Image Registration', () => {
   describe('Submitting an image with invalid inputs', () => {
+    after( () => {
+      localStorage.clear()}
+    )
     const input ={
       title: '', 
       url: ''
