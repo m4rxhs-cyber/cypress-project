@@ -6,6 +6,7 @@ on:
             - master
         paths:
             - 'cypress-project/cypress/**'
+            - '.github/workflows/cypress-project.yml'
 
 jobs:
   cypress-project-tests:
