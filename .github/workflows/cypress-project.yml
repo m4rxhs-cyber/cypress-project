@@ -5,10 +5,8 @@ on:
         branches:
             - master
         paths:
-            - 'cypress-project/**.js'
-            - 'cypress-project/**.json'
-            - 'cypress-project/**.yml'
-            - '.github/workflows/**'
+            - 'cypress-project/**'
+            - '.github/workflows/cypress-project.yml'
 
 jobs:
   cypress-project-tests:
@@ -28,4 +26,3 @@ jobs:
 
         - name: Run Cypress tests (headless)
           run: npx cypress run
-
