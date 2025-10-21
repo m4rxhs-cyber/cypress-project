@@ -1,22 +1,22 @@
 import { RegisterForm } from "../../support/pages/RegisterForm";
 
 const registerForm = new RegisterForm();
+
 const colors = {
   errors: "rgb(220, 53, 69)",
   success: "rgb(25, 135, 84)",
 };
-
-const input = {
-  title: "",
-  url: "",
-};
-
 
 describe("Image Registration", () => {
   describe("Submitting an image with invalid inputs", () => {
     after(() => {
       cy.clearAllLocalStorage();
     });
+
+    const input = {
+      title: "",
+      url: "",
+    };
 
     it("Given I am on the image registration page", () => {
       cy.visit("/");
@@ -61,10 +61,15 @@ describe("Image Registration", () => {
     });
   });
 
-  describe.only("Submitting an image with valid inputs using enter key", () => {
+  describe("Submitting an image with valid inputs using enter key", () => {
     after(() => {
       cy.clearAllLocalStorage();
     });
+
+    const input = {
+      title: "Alien BR",
+      url: "https://cdn.mos.cms.futurecdn.net/eM9EvWyDxXcnQTTyH8c8p5-1200-80.jpg",
+    };
 
     input.title = "Alien BR";
     input.url =
@@ -101,11 +106,15 @@ describe("Image Registration", () => {
     });
 
     it(`I can hit enter to submit the form`, () => {
-      registerForm.clickSubmit()
-    })
+      registerForm.clickSubmit();
+    });
 
     it(`the list of registered images should be updated with the new item`, () => {
-      
-    })
+      cy.get('#card-list article').should('have.length.greaterThan', 3)
+    });
   });
+
+  describe("Submitting an image and updating the list", () => {
+    
+  })
 });
