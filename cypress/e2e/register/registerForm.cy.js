@@ -114,7 +114,4 @@ describe("Image Registration", () => {
     });
   });
 
-  describe("Submitting an image and updating the list", () => {
-    
-  })
 });
