@@ -114,4 +114,5 @@ describe("Image Registration", () => {
     });
   });
 
+  describe("Submitting an image with valid inputs using enter key")
 });
