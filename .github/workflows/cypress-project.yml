@@ -5,7 +5,7 @@ on:
         branches:
             - master
         paths:
-            - 'cypress-project/cypress/**'
+            - 'cypress/**'
             - '.github/workflows/cypress-project.yml'
 
 jobs:
